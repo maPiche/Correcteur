@@ -1,0 +1,9 @@
+
+- lecture fichier
+- sauvegarder fichier
+- load dictionnaire
+- structure dictionnaire
+- distance de mots
+- highlight text
+- side menu on-right-click d'un mot highlight
+- methode replace-range pour remplacer le mot, ensuite relancer verifier ou faire un-highlight
