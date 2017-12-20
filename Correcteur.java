@@ -141,6 +141,8 @@ public class Correcteur extends JFrame{
         this.setJMenuBar(menuBar);
     }// -- END MENU
 
+    //todo ajouter fonction qui renvoie un array de 5 mots à partir d'un right click sur un mot et du dictionnaire
+
 
     public static void main(String[] args) {
         Correcteur frame = new Correcteur();
