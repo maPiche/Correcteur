@@ -7,11 +7,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 public class Correcteur extends JFrame{
     private JTextArea texteZone = new JTextArea();
-    private Font textFont =  new Font("Arial",10,26);
+    private Font textFont =  new Font("Arial",Font.PLAIN,26);
+    private Dictionnaire dictionnaire;
 
     private Correcteur() {
         super("Correcteur");
@@ -56,12 +60,11 @@ public class Correcteur extends JFrame{
 
         JMenuItem menuItemOuvrir = new JMenuItem("Ouvrir");
         menuFichier.add(menuItemOuvrir);
-        menuItemOuvrir.getAccessibleContext().setAccessibleDescription(
-                "Ouvrir un fichier");
-        Action openFileAction = new AbstractAction("Save") {
+        menuItemOuvrir.getAccessibleContext().setAccessibleDescription("Ouvrir un fichier");
+        Action openFileAction = new AbstractAction("Ouverture") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Ouvrir...");
+                System.out.println("Ouvrir...");//todo LECTURE d'un fichier .txt avec JFilechooser et remplacer le contenu de texteZone
             }
         };
         openFileAction.putValue(Action.ACCELERATOR_KEY,KeyStroke.getKeyStroke(KeyEvent.VK_O, KeyEvent.CTRL_DOWN_MASK));
@@ -73,7 +76,7 @@ public class Correcteur extends JFrame{
         Action saveAction = new AbstractAction("Save") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Saving...");
+                System.out.println("Saving...");//todo ÉCRITURE d'un fichier .txt avec JFilechooser et remplacer le contenu de texteZone
             }
         };
         saveAction.putValue(Action.ACCELERATOR_KEY,KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_DOWN_MASK));
@@ -96,6 +99,23 @@ public class Correcteur extends JFrame{
         JMenu menuDict = new JMenu("Dictionnaire");
         JMenuItem menuItemCharger = new JMenuItem("Charger...");
         menuDict.add(menuItemCharger);
+        menuItemCharger.getAccessibleContext().setAccessibleDescription("Charger un dictionnaire");
+        Action loadAction = new AbstractAction("Dictionnaire...") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                try {
+                    dictionnaire = new Dictionnaire(new File("dict.f.txt")); //todo : changer pour un JFileChooser et verifie si c'est un .txt
+                    System.out.println(dictionnaire.querry("abricot"));//todo : a supprimer (fonction test)
+
+                }catch (FileNotFoundException exception){
+                    System.out.println("Erreur : Fichier dictionnaire introuvable"); //todo remplacer par un message a l'utilisateur
+                }catch (IOException exception){
+                    exception.printStackTrace();
+                }
+            }
+        };
+        menuItemCharger.setAction(loadAction);
         menuBar.add(menuDict);
 
         //menu verification
@@ -106,11 +126,13 @@ public class Correcteur extends JFrame{
         Action verifierAction = new AbstractAction("Vérifier") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //todo if disctionaire is empty message
-                System.out.println("Vérifions");
-                TextAreaHighlight h = new TextAreaHighlight();
-                h.highlight(texteZone,"arbre");
-
+                if (dictionnaire != null && !(dictionnaire.isEmpty())) {
+                    System.out.println("Vérifions");
+                    TextAreaHighlight h = new TextAreaHighlight();
+                    h.highlight(texteZone, "arbre");//todo : changer pour une fonction qui highlight les mots pas dans le dictionnaire -- probablement en modifiant textAreaHighlight
+                }else {
+                    System.out.println("Le dictionnaire est vide"); //todo remplacer par un message a l'utilisateur
+                }
             }
         };
         menuItemOrth.setAction(verifierAction);
