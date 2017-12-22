@@ -9,7 +9,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight$MyHighlightPainter.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight$MyHighlightPainter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Correcteur.java" afterPath="$PROJECT_DIR$/Correcteur.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -607,7 +606,7 @@
       <updated>1513542242290</updated>
       <workItem from="1513542244073" duration="30737000" />
       <workItem from="1513882292062" duration="394000" />
-      <workItem from="1513958424248" duration="19343000" />
+      <workItem from="1513958424248" duration="19363000" />
     </task>
     <task id="LOCAL-00001" summary="update JFileChooser">
       <created>1513958969158</created>
@@ -623,11 +622,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513978132244</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update Right-click">
+      <created>1513984297716</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1513984297716</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50474000" />
+    <option name="totallyTimeSpent" value="50494000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="8" width="2929" height="2093" extended-state="0" />
@@ -733,7 +739,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update JFileChooser" />
     <MESSAGE value="update Highlight avec dictionnaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Highlight avec dictionnaire" />
+    <MESSAGE value="update Right-click" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Right-click" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
