@@ -3,13 +3,12 @@
  */
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 
 public class Correcteur extends JFrame{
@@ -33,7 +32,7 @@ public class Correcteur extends JFrame{
         this.pack();
     }
 
-    class Boutton extends JButton implements ActionListener{
+    /*class Boutton extends JButton implements ActionListener{
 
         Boutton(String name) {
             super(name);
@@ -45,7 +44,7 @@ public class Correcteur extends JFrame{
         public void actionPerformed(java.awt.event.ActionEvent e) {
             texteZone.append(getText());
         }
-    }
+    }*/
 
 
     //---MENU BAR
@@ -54,6 +53,7 @@ public class Correcteur extends JFrame{
         UIManager.put("MenuItem.font", textFont);
         JMenuBar menuBar = new JMenuBar();
 
+        
         //menu fichier
         JMenu menuFichier = new JMenu("Fichier");
         menuBar.add(menuFichier);
@@ -61,10 +61,30 @@ public class Correcteur extends JFrame{
         JMenuItem menuItemOuvrir = new JMenuItem("Ouvrir");
         menuFichier.add(menuItemOuvrir);
         menuItemOuvrir.getAccessibleContext().setAccessibleDescription("Ouvrir un fichier");
-        Action openFileAction = new AbstractAction("Ouverture") {
+        Action openFileAction = new AbstractAction("Ouvrir") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Ouvrir...");//todo LECTURE d'un fichier .txt avec JFilechooser et remplacer le contenu de texteZone
+            	try {
+            		JFileChooser choix = new JFileChooser();{
+	            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt"); //verifie que l'extension du fichier est bien .txt
+	            		choix.setFileFilter(filter); //applique le filtre 
+	             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+	             		FileReader in = new FileReader(choix.getSelectedFile());
+	             		BufferedReader buff = new BufferedReader(in);  
+	             		String ligne;
+	             		texteZone.setText("");
+	             		
+	             		while((ligne = buff.readLine()) != null) {
+	             			texteZone.append(ligne + "\n");
+	             		}
+	             		buff.close();
+	             	}
+            		}
+            }catch (FileNotFoundException exception){
+            		JOptionPane.showMessageDialog(null, "Fichier de lecture introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+            }catch (IOException exception){
+                exception.printStackTrace();
+            }
             }
         };
         openFileAction.putValue(Action.ACCELERATOR_KEY,KeyStroke.getKeyStroke(KeyEvent.VK_O, KeyEvent.CTRL_DOWN_MASK));
@@ -73,10 +93,25 @@ public class Correcteur extends JFrame{
         JMenuItem menuItemEnreg = new JMenuItem("Enregistrer");
         menuFichier.add(menuItemEnreg);
         menuItemEnreg.getAccessibleContext().setAccessibleDescription("Enregistrer un fichier");
-        Action saveAction = new AbstractAction("Save") {
+        Action saveAction = new AbstractAction("Enregistrer") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Saving...");//todo ÉCRITURE d'un fichier .txt avec JFilechooser et remplacer le contenu de texteZone
+	            	try {
+	            		JFileChooser choix = new JFileChooser();{
+		            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt"); //verifie que l'extension du fichier est bien .txt
+		            		choix.setFileFilter(filter); //applique le filtre 
+		             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+		             		FileWriter out = new FileWriter(choix.getSelectedFile());
+		             		BufferedWriter buff = new BufferedWriter(out);  
+		             		out.write(texteZone.getText());	             		
+		             		buff.close();
+		             	}
+	            		}	
+	            }catch (FileNotFoundException exception){
+	            		JOptionPane.showMessageDialog(null, "Fichier d'écriture introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+	            }catch (IOException exception){
+	                exception.printStackTrace();
+	            }
             }
         };
         saveAction.putValue(Action.ACCELERATOR_KEY,KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_DOWN_MASK));
@@ -88,13 +123,15 @@ public class Correcteur extends JFrame{
         Action quitAction = new AbstractAction("Quitter") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Au revoir");
+            		JOptionPane.showMessageDialog(null, "Au revoir!", "Fermeture", JOptionPane.INFORMATION_MESSAGE);
                 System.exit(0);
             }
         };
         menuItemQuit.setAction(quitAction);
         //fin menu fichier
 
+        
+        
         //menu dictionnaire
         JMenu menuDict = new JMenu("Dictionnaire");
         JMenuItem menuItemCharger = new JMenuItem("Charger...");
@@ -104,20 +141,28 @@ public class Correcteur extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                try {
-                    dictionnaire = new Dictionnaire(new File("dict.f.txt")); //todo : changer pour un JFileChooser et verifie si c'est un .txt
-                    System.out.println(dictionnaire.querry("abricot"));//todo : a supprimer (fonction test)
-
-                }catch (FileNotFoundException exception){
-                    System.out.println("Erreur : Fichier dictionnaire introuvable"); //todo remplacer par un message a l'utilisateur
-                }catch (IOException exception){
-                    exception.printStackTrace();
-                }
+	            	try {
+	            		JFileChooser choix = new JFileChooser();{
+		            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt"); //verifie que l'extension du fichier est bien .txt
+		            		choix.setFileFilter(filter); //applique le filtre 
+		             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+		             		dictionnaire = new Dictionnaire(choix.getSelectedFile());
+		             	}
+	            		}
+	            }catch (FileNotFoundException exception){
+	            		JOptionPane.showMessageDialog(null, "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+	            }catch (IOException exception){
+	                exception.printStackTrace();
+	            }
             }
         };
         menuItemCharger.setAction(loadAction);
         menuBar.add(menuDict);
 
+        
+        
+        
+        
         //menu verification
         JMenu menuVerif = new JMenu("Vérifier");
         JMenuItem menuItemOrth = new JMenuItem("Orthographe");
@@ -127,11 +172,10 @@ public class Correcteur extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (dictionnaire != null && !(dictionnaire.isEmpty())) {
-                    System.out.println("Vérifions");
                     TextAreaHighlight h = new TextAreaHighlight();
                     h.highlight(texteZone, "arbre");//todo : changer pour une fonction qui highlight les mots pas dans le dictionnaire -- probablement en modifiant textAreaHighlight
                 }else {
-                    System.out.println("Le dictionnaire est vide"); //todo remplacer par un message a l'utilisateur
+                		JOptionPane.showMessageDialog(null, "Le dictionnaire est vide!", "Erreur", JOptionPane.ERROR_MESSAGE);
                 }
             }
         };
