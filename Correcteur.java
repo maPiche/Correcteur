@@ -147,6 +147,7 @@ public class Correcteur extends JFrame{
 		            		choix.setFileFilter(filter); //applique le filtre 
 		             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 		             		dictionnaire = new Dictionnaire(choix.getSelectedFile());
+		             		System.out.println(dictionnaire.querry("pomme"));
 		             	}
 	            		}
 	            }catch (FileNotFoundException exception){
@@ -173,7 +174,7 @@ public class Correcteur extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (dictionnaire != null && !(dictionnaire.isEmpty())) {
                     TextAreaHighlight h = new TextAreaHighlight();
-                    h.highlight(texteZone, "arbre");//todo : changer pour une fonction qui highlight les mots pas dans le dictionnaire -- probablement en modifiant textAreaHighlight
+                    h.highlight(texteZone, dictionnaire);//todo : changer pour une fonction qui highlight les mots pas dans le dictionnaire -- probablement en modifiant textAreaHighlight
                 }else {
                 		JOptionPane.showMessageDialog(null, "Le dictionnaire est vide!", "Erreur", JOptionPane.ERROR_MESSAGE);
                 }
