@@ -4,9 +4,9 @@
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.text.Utilities;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -14,9 +14,10 @@ import java.io.*;
 
 
 public class Correcteur extends JFrame{
-    private JTextArea texteZone = new JTextArea();
+    private JTextArea texteZone = new JTextArea("C'est fou ce Dictionnaire inncroyalbe.");
     private Font textFont =  new Font("Arial",Font.PLAIN,26);
     private Dictionnaire dictionnaire;
+    private Boolean corrige = false;
 
     private Correcteur() {
         super("Correcteur");
@@ -32,6 +33,30 @@ public class Correcteur extends JFrame{
         makeMenu();
         this.add(textPanel, BorderLayout.CENTER);
         this.pack();
+        texteZone.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                if (SwingUtilities.isRightMouseButton(e)) {
+                    try {
+                        int offset = texteZone.viewToModel(e.getPoint());
+                        System.out.println(texteZone.modelToView(offset));
+                        int start = Utilities.getWordStart(texteZone, offset);
+                        int end = Utilities.getWordEnd(texteZone, offset);
+                        String word = texteZone.getDocument().getText(start, end - start);
+                        System.out.println("Selected word: " + word);
+                        checkWord(word, start, end);
+                    } catch (Exception e2) {
+                    }
+                }
+            }
+        });
+    }
+
+
+    private void checkWord(String word, int wordStart, int wordEnd) {
+        if (!dictionnaire.querry(word.toLowerCase())) {
+            JOptionPane.showMessageDialog(null, word);
+            texteZone.select(wordStart, wordEnd);
+        }
     }
 
     /*class Boutton extends JMenuItem implements ActionListener{
@@ -175,8 +200,7 @@ public class Correcteur extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (dictionnaire != null && !(dictionnaire.isEmpty())) {
                     TextAreaHighlight h = new TextAreaHighlight();
-                    h.highlight(texteZone, "arbre");//todo : changer pour une fonction qui highlight les mots pas dans le dictionnaire -- probablement en modifiant textAreaHighlight
-                    
+                    h.highlight(texteZone, dictionnaire);//highlight les mots qui ne sont pas dans dictionnaire
                     JPopupMenu menuCor = new JPopupMenu();
                     
                     JMenuItem mot1 = new JMenuItem("mot1");
