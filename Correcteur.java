@@ -4,20 +4,19 @@
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.Utilities;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
 
 
 public class Correcteur extends JFrame{
-    private JTextArea texteZone = new JTextArea("C'est fou ce Dictionnaire inncroyalbe.");
+    private JTextArea texteZone = new JTextArea();
     private Font textFont =  new Font("Arial",Font.PLAIN,26);
     private Dictionnaire dictionnaire;
-    private Boolean corriger = false;
 
     private Correcteur() {
         super("Correcteur");
@@ -33,37 +32,9 @@ public class Correcteur extends JFrame{
         makeMenu();
         this.add(textPanel, BorderLayout.CENTER);
         this.pack();
-        texteZone.addMouseListener( new MouseAdapter()
-        {
-            public void mouseClicked(MouseEvent e)
-            {
-                if ( SwingUtilities.isRightMouseButton(e) )
-                {
-                    try
-                    {
-                        int offset = texteZone.viewToModel( e.getPoint() );
-                        System.out.println( texteZone.modelToView( offset ) );
-                        int start = Utilities.getWordStart(texteZone,offset);
-                        int end = Utilities.getWordEnd(texteZone, offset);
-                        String word = texteZone.getDocument().getText(start, end-start);
-                        System.out.println( "Selected word: " + word);
-                        checkWord(word, start, end);
-                    }
-                    catch (Exception e2) {}
-                }
-            }
-        });
     }
 
-
-    private void checkWord(String word, int wordStart, int wordEnd){
-        if (!dictionnaire.querry(word.toLowerCase())){
-            JOptionPane.showMessageDialog(null, word);
-            texteZone.select(wordStart, wordEnd);
-        }
-    }
-
-    /*class Boutton extends JButton implements ActionListener{
+    /*class Boutton extends JMenuItem implements ActionListener{
 
         Boutton(String name) {
             super(name);
@@ -178,7 +149,6 @@ public class Correcteur extends JFrame{
 		            		choix.setFileFilter(filter); //applique le filtre 
 		             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 		             		dictionnaire = new Dictionnaire(choix.getSelectedFile());
-		             		System.out.println(dictionnaire.querry("pomme"));
 		             	}
 	            		}
 	            }catch (FileNotFoundException exception){
@@ -205,7 +175,55 @@ public class Correcteur extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (dictionnaire != null && !(dictionnaire.isEmpty())) {
                     TextAreaHighlight h = new TextAreaHighlight();
-                    h.highlight(texteZone, dictionnaire);//highlight les mots qui ne sont pas dans dictionnaire
+                    h.highlight(texteZone, "arbre");//todo : changer pour une fonction qui highlight les mots pas dans le dictionnaire -- probablement en modifiant textAreaHighlight
+                    
+                    JPopupMenu menuCor = new JPopupMenu();
+                    
+                    JMenuItem mot1 = new JMenuItem("mot1");
+                    JMenuItem mot2 = new JMenuItem("mot2");
+                    JMenuItem mot3 = new JMenuItem("mot3");
+                    JMenuItem mot4 = new JMenuItem("mot4");
+                    JMenuItem mot5 = new JMenuItem("mot5");
+                    
+                    mot1.addActionListener(this);
+                    mot2.addActionListener(this);
+                    mot3.addActionListener(this);
+                    mot4.addActionListener(this);
+                    mot5.addActionListener(this);
+    
+                	    menuCor.add(mot1);
+              	    menuCor.add(mot2);
+              	    menuCor.add(mot3);
+              	    menuCor.add(mot4);
+              	    menuCor.add(mot5);
+              	    texteZone.add(menuCor);
+                    
+                    texteZone.addMouseListener(new MouseAdapter(){
+                    		 public void mousePressed(MouseEvent event) {
+                            if(event.isPopupTrigger()) {
+	                        	  menuCor.show(texteZone, event.getX(), event.getY() + 20); //affiche le menu -- plus bas afin de ne pas cacher le mot incorrect
+                            }
+	                     }
+                    });
+                    
+                    menuCor.addMouseListener(new MouseAdapter(){
+               		 public void mousePressed(MouseEvent event) {
+               			if(e.getSource() == mot1) {
+							JOptionPane.showMessageDialog(null, "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+						}
+                    }
+               });
+                    
+                    /*ActionListener choixMot = new ActionListener() {
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							if(e.getSource() == mot1) {
+								JOptionPane.showMessageDialog(null, "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+							}
+						}
+                    	
+                    };*/
+                    
                 }else {
                 		JOptionPane.showMessageDialog(null, "Le dictionnaire est vide!", "Erreur", JOptionPane.ERROR_MESSAGE);
                 }
@@ -217,12 +235,6 @@ public class Correcteur extends JFrame{
         this.setJMenuBar(menuBar);
     }// -- END MENU
 
-
-
-
-
-
-
     //todo ajouter fonction qui renvoie un array de 5 mots à partir d'un right click sur un mot et du dictionnaire
 
 
@@ -233,6 +245,5 @@ public class Correcteur extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
-
     }
 }
