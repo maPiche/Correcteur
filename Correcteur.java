@@ -53,6 +53,7 @@ public class Correcteur extends JFrame{
         }
         @Override
         public void actionPerformed(ActionEvent e) {
+
             JOptionPane.showMessageDialog(null,
                     word +" :"+distance, "Erreur", JOptionPane.ERROR_MESSAGE);
         }
@@ -62,13 +63,16 @@ public class Correcteur extends JFrame{
         //Genere un menu si le mot n'est pas dans le dictionnaire
         if (!(dictionnaire.querry(word.toLowerCase()) || dictionnaire.isPunctuation(word.charAt(0)))) {
             texteZone.select(wordStart, wordEnd);
-            
+
+            WordDistance wd = new WordDistance();
+            String words[] = wd.correction(word,dictionnaire);
+
             //Creation des mots proposes dans le JPopupMenu
-            JMenuItem mot1 = new JMenuItem(new distanceDeMot(word,1));
-            JMenuItem mot2 = new JMenuItem(new distanceDeMot(word,2));
-            JMenuItem mot3 = new JMenuItem(new distanceDeMot(word,3));
-            JMenuItem mot4 = new JMenuItem(new distanceDeMot(word,4));
-            JMenuItem mot5 = new JMenuItem(new distanceDeMot(word,5));
+            JMenuItem mot1 = new JMenuItem(new distanceDeMot(words[0],1));
+            JMenuItem mot2 = new JMenuItem(new distanceDeMot(words[1],2));
+            JMenuItem mot3 = new JMenuItem(new distanceDeMot(words[2],3));
+            JMenuItem mot4 = new JMenuItem(new distanceDeMot(words[3],4));
+            JMenuItem mot5 = new JMenuItem(new distanceDeMot(words[4],5));
 
             menuCor.add(mot1);
             menuCor.add(mot2);

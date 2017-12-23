@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ac6b60-163f-4dd4-8edb-3af844cd84f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$1.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$2.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$3.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$4.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$5.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Dictionnaire.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Dictionnaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight$MyHighlightPainter.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight$MyHighlightPainter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaHighlight.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$1.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$2.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$3.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$4.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/TextAreaTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WordDistance.java" afterPath="$PROJECT_DIR$/WordDistance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Correcteur.java" afterPath="$PROJECT_DIR$/Correcteur.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,13 +33,13 @@
       <file leaf-file-name="Correcteur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Correcteur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3848">
-              <caret line="124" column="56" lean-forward="true" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
+            <state relative-caret-position="560">
+              <caret line="71" column="68" lean-forward="false" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#8982#10023#0" expanded="true" />
-                <element signature="e#10022#10023#0" expanded="true" />
+                <element signature="e#10157#11290#0" expanded="true" />
+                <element signature="e#11289#11290#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,10 +49,10 @@
         <entry file="file://$PROJECT_DIR$/WordDistance.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="560">
-              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#452#460#0" expanded="true" />
+                <element signature="e#480#488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +61,8 @@
       <file leaf-file-name="TextAreaTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TextAreaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="45" column="70" lean-forward="true" selection-start-line="45" selection-start-column="70" selection-end-line="49" selection-end-column="76" />
+            <state relative-caret-position="240">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,13 +73,12 @@
       <file leaf-file-name="TextAreaHighlight.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TextAreaHighlight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="120">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
-                <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
-                <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
+                <marker date="1514002593039" expanded="false" signature="2323:2338" ph=" { " />
+                <marker date="1514002593039" expanded="false" signature="2351:2361" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -74,15 +87,15 @@
       <file leaf-file-name="Dictionnaire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dictionnaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="252">
+              <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1343#1344#0" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
-                <element signature="e#1560#1561#0" expanded="true" />
-                <marker date="1513999907609" expanded="false" signature="1647:1661" ph=" { " />
+                <element signature="e#1379#1380#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1543#1544#0" expanded="true" />
+                <element signature="e#1596#1597#0" expanded="true" />
+                <marker date="1514002592993" expanded="false" signature="1683:1697" ph=" { " />
               </folding>
             </state>
           </provider>
@@ -124,11 +137,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/SwingShortcutDemo.java" />
-        <option value="$PROJECT_DIR$/TextAreaHighlight.java" />
         <option value="$PROJECT_DIR$/TextAreaTest.java" />
-        <option value="$PROJECT_DIR$/Correcteur.java" />
+        <option value="$PROJECT_DIR$/TextAreaHighlight.java" />
         <option value="$PROJECT_DIR$/Dictionnaire.java" />
         <option value="$PROJECT_DIR$/WordDistance.java" />
+        <option value="$PROJECT_DIR$/Correcteur.java" />
       </list>
     </option>
   </component>
@@ -622,7 +635,7 @@
       <updated>1513542242290</updated>
       <workItem from="1513542244073" duration="30737000" />
       <workItem from="1513882292062" duration="394000" />
-      <workItem from="1513958424248" duration="34719000" />
+      <workItem from="1513958424248" duration="35291000" />
     </task>
     <task id="LOCAL-00001" summary="update JFileChooser">
       <created>1513958969158</created>
@@ -708,11 +721,25 @@
       <option name="project" value="LOCAL" />
       <updated>1514000285794</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update Distance">
+      <created>1514002479102</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1514002479102</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update Distance Tableau">
+      <created>1514002606701</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1514002606702</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65850000" />
+    <option name="totallyTimeSpent" value="66422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2114" extended-state="6" />
@@ -732,7 +759,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898316" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -832,7 +859,8 @@
     <MESSAGE value="update Right-click" />
     <MESSAGE value="update Merge" />
     <MESSAGE value="update Distance" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Distance" />
+    <MESSAGE value="update Distance Tableau" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Distance Tableau" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -850,8 +878,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#8982#10023#0" expanded="true" />
-            <element signature="e#10022#10023#0" expanded="true" />
+            <element signature="e#10157#11290#0" expanded="true" />
+            <element signature="e#11289#11290#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -872,9 +900,8 @@
           <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
-            <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
-            <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
+            <marker date="1514002593039" expanded="false" signature="2323:2338" ph=" { " />
+            <marker date="1514002593039" expanded="false" signature="2351:2361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -885,11 +912,11 @@
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1343#1344#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <marker date="1513999907609" expanded="false" signature="1647:1661" ph=" { " />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+            <marker date="1514002592993" expanded="false" signature="1683:1697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -901,8 +928,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#8982#10023#0" expanded="true" />
-            <element signature="e#10022#10023#0" expanded="true" />
+            <element signature="e#10157#11290#0" expanded="true" />
+            <element signature="e#11289#11290#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -923,9 +950,8 @@
           <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
-            <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
-            <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
+            <marker date="1514002593039" expanded="false" signature="2323:2338" ph=" { " />
+            <marker date="1514002593039" expanded="false" signature="2351:2361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -936,11 +962,11 @@
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1343#1344#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <marker date="1513999907609" expanded="false" signature="1647:1661" ph=" { " />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+            <marker date="1514002592993" expanded="false" signature="1683:1697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -972,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TextAreaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="45" column="70" lean-forward="true" selection-start-line="45" selection-start-column="70" selection-end-line="49" selection-end-column="76" />
+        <state relative-caret-position="240">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -982,41 +1008,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TextAreaHighlight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
-            <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
-            <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
+            <marker date="1514002593039" expanded="false" signature="2323:2338" ph=" { " />
+            <marker date="1514002593039" expanded="false" signature="2351:2361" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dictionnaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="252">
+          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1343#1344#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <marker date="1513999907609" expanded="false" signature="1647:1661" ph=" { " />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+            <marker date="1514002592993" expanded="false" signature="1683:1697" ph=" { " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Correcteur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3848">
-          <caret line="124" column="56" lean-forward="true" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
+        <state relative-caret-position="560">
+          <caret line="71" column="68" lean-forward="false" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#8982#10023#0" expanded="true" />
-            <element signature="e#10022#10023#0" expanded="true" />
+            <element signature="e#10157#11290#0" expanded="true" />
+            <element signature="e#11289#11290#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1024,10 +1049,10 @@
     <entry file="file://$PROJECT_DIR$/WordDistance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#452#460#0" expanded="true" />
+            <element signature="e#480#488#0" expanded="true" />
           </folding>
         </state>
       </provider>
