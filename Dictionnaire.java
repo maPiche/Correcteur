@@ -15,28 +15,28 @@ import static java.util.Arrays.sort;
 
 class Dictionnaire {
 
-        private HashSet<String> setDict = new HashSet<>();
-        private char[] punctuation = new char[]{' ','.',',','!','?','(',')','{','}','[',']','\n','+','&','@','<','>',';',':','\'','\"','\\','/'};
-
-        Dictionnaire(File dictionnaire) throws IOException {
+        private HashSet<String> setDict = new HashSet<>(); //Declare la structure d'un dictionnaire
+        private char[] punctuation = new char[]{' ','.',',','!','?','(',')','{','}','[',']','\n','+','&','@','<','>',';',':','\'','\"','\\','/'}; //Ponctuation possible
+        																																		//a ne pas prendre en compte
+        Dictionnaire(File dictionnaire) throws IOException { //Creation du dictionnaire a partir dun fichier txt
             sort(punctuation);
             BufferedReader input = new BufferedReader(new FileReader(dictionnaire));
             String line;
-            while ((line = input.readLine()) != null) {
+            while ((line = input.readLine()) != null) { //Lecture du fichier ligne par ligne
                 setDict.add(line);
             }
             input.close();
         }
 
-        //indique si un character est une punctuation -* un appelle pour chaque lettre du texte
+        //Indique si un charactere est une punctuation -* un appelle pour chaque lettre du texte
         public boolean isPunctuation(char c){
             return (binarySearch(punctuation, c)>-1);
         }
-
+        //Recherche un certain mot dans le dictionnaire
         public Boolean querry(String word){
             return setDict.contains(word);
         }
-
+        //Verifie si le dictionnaire est vide ou non
         public boolean isEmpty(){
             return setDict.isEmpty();
         }
