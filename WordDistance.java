@@ -4,15 +4,16 @@ import java.util.Random;
 
 /**
  * Created by Marc-André Piché|783722 | 2017-12-17.
- * 			  Anthony Lemieux|20077762
- *
+ * Anthony Lemieux|20077762
+ * <p>
  * Calcul la distance d'édition entre deux mots en considérant leur similarité
  * implantation de l'algorithme de Levenshtein
  */
 
 
 public class WordDistance {
-    private int maxDistance = Integer.MAX_VALUE;
+    private int minDistance = Integer.MAX_VALUE;
+    private int distanceCounter = 0;
     private Random dice = new Random();
 
     final private ArrayList<Result> results = new ArrayList<Result>();
@@ -21,41 +22,49 @@ public class WordDistance {
     public String[] correction(String inconnue, Dictionnaire dictionnaire) {
         for (String item : dictionnaire.setDict) {
             //insert le mot comparé dans la liste
-            insert(new Result(compare(inconnue, item,Math.max(inconnue.length(),item.length())),item));
+            Result inserted = new Result(compare(inconnue, item, Math.max(inconnue.length(), item.length())), item);
+            if (inserted.distance < minDistance) {
+                insert(inserted);
+            }
         }
         //renvoie les 5 meilleurs mots
         String[] returned = new String[5];
-        for (int j = 0; j<returned.length ;j++){
+        for (int j = 0; j < returned.length; j++) {
             returned[j] = results.get(j).word;
         }
         return returned;
     }
 
-    private void insert(Result mot){
-        if (mot.distance < maxDistance){
 
-            for (int i = 0; i < results.size(); i++) {
-                if (results.get(i).distance < mot.distance) continue;
-                if (results.get(i).distance == mot.distance) {
-                    if (dice.nextBoolean()) results.set(i,mot);
+    private void insert(Result mot) {
+        distanceCounter++;
+        for (int i = 0; i < results.size(); i++) {
+            if (results.get(i).distance < mot.distance) continue;
+            if (results.get(i).distance == mot.distance) {
+                if(dice.nextBoolean()){
+                    results.add(i, mot);
+                    if (distanceCounter > 4) {
+                        minDistance = results.get(4).distance;
+                    }
                     return;
-                }
-                results.set(i,mot);
-                return;
+                } else continue;
             }
-            results.add(mot);
+            results.set(i, mot);
+            return;
         }
+        results.add(mot);
     }
 
-    private class Result {
-        int distance;
-        String word;
+private class Result {
+    int distance;
+    String word;
 
-        Result(int distance, String word) {
-            this.distance = distance;
-            this.word = word;
-        }
+    Result(int distance, String word) {
+        this.distance = distance;
+        this.word = word;
     }
+
+}
 
     private static int compare(String left, String right, int limite) {
         if (left == null || right == null) {

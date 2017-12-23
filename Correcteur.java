@@ -67,6 +67,8 @@ public class Correcteur extends JFrame{
             WordDistance wd = new WordDistance();
             String words[] = wd.correction(word,dictionnaire);
 
+
+            System.out.println(words.toString());
             //Creation des mots proposes dans le JPopupMenu
             JMenuItem mot1 = new JMenuItem(new distanceDeMot(words[0],1));
             JMenuItem mot2 = new JMenuItem(new distanceDeMot(words[1],2));
