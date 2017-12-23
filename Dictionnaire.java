@@ -15,7 +15,7 @@ import static java.util.Arrays.sort;
 
 class Dictionnaire {
 
-        private HashSet<String> setDict = new HashSet<>(); //Declare la structure d'un dictionnaire
+        HashSet<String> setDict = new HashSet<>(); //Declare la structure d'un dictionnaire
         private char[] punctuation = new char[]{' ','.',',','!','?','(',')','{','}','[',']','\n','+','&','@','<','>',';',':','\'','\"','\\','/'}; //Ponctuation possible
         																																		//a ne pas prendre en compte
         Dictionnaire(File dictionnaire) throws IOException { //Creation du dictionnaire a partir dun fichier txt

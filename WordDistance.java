@@ -10,6 +10,26 @@ import java.util.Arrays;
 
 public class WordDistance {
 
+    //méthode inefficace du au type de dictionnaire Hashset s'adonne à être moins bon ici, une Trie aurait été parfaite
+    public static String[] correction(String inconnue, Dictionnaire dictionnaire){
+        final Result[] results = new Result[5];
+
+        for (String item:dictionnaire.setDict) {
+
+        }
+
+        }
+    }
+
+    private class Result{
+        int distance;
+        String word;
+        Result(int distance, String word){
+            this.distance = distance;
+            this.word = word;
+        }
+    }
+
     public static int compare(String left, String right, int limite) {
         if (left == null || right == null) {
             throw new IllegalArgumentException("Strings must not be null");
