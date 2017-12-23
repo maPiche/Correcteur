@@ -246,5 +246,12 @@ public class Correcteur extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        System.out.println(WordDistance.compare("cheval","anal", 6));
+
+        System.out.println(WordDistance.compare("vent","lent", 5));
+
+        System.out.println(WordDistance.compare("roger","Roger", 5));
+
+        System.out.println(WordDistance.compare("crotte","taboolée", 10));
     }
 }

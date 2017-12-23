@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 public class WordDistance {
 
-    public int Compare(String left, String right, int limite) {
+    public static int compare(String left, String right, int limite) {
         if (left == null || right == null) {
             throw new IllegalArgumentException("Strings must not be null");
         }
