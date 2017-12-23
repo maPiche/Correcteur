@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ac6b60-163f-4dd4-8edb-3af844cd84f8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Correcteur.java" afterPath="$PROJECT_DIR$/Correcteur.java" />
     </list>
@@ -25,17 +19,13 @@
       <file leaf-file-name="Correcteur.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Correcteur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+            <state relative-caret-position="160">
+              <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="49" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1189#1974#0" expanded="true" />
-                <element signature="e#1973#1974#0" expanded="true" />
-                <element signature="e#9623#9998#0" expanded="true" />
-                <element signature="e#9997#9998#0" expanded="true" />
-                <element signature="e#10067#10373#0" expanded="true" />
-                <element signature="e#10372#10373#0" expanded="true" />
+                <element signature="e#8844#9885#0" expanded="true" />
+                <element signature="e#9884#9885#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,9 +119,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="30" />
-    <option name="width" value="2929" />
-    <option name="height" value="2071" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3864" />
+    <option name="height" value="2114" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -611,7 +602,7 @@
       <updated>1513542242290</updated>
       <workItem from="1513542244073" duration="30737000" />
       <workItem from="1513882292062" duration="394000" />
-      <workItem from="1513958424248" duration="20808000" />
+      <workItem from="1513958424248" duration="24118000" />
     </task>
     <task id="LOCAL-00001" summary="update JFileChooser">
       <created>1513958969158</created>
@@ -641,14 +632,21 @@
       <option name="project" value="LOCAL" />
       <updated>1513984304239</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update Merge">
+      <created>1513985790496</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1513985790496</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51939000" />
+    <option name="totallyTimeSpent" value="55249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="2929" height="2071" extended-state="0" />
+    <frame x="-12" y="-12" width="3864" height="2114" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -670,7 +668,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41653073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29690048" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2901169" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5170517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -763,7 +761,8 @@
     <MESSAGE value="update JFileChooser" />
     <MESSAGE value="update Highlight avec dictionnaire" />
     <MESSAGE value="update Right-click" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Right-click" />
+    <MESSAGE value="update Merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -781,12 +780,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1189#1974#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
-            <element signature="e#9623#9998#0" expanded="true" />
-            <element signature="e#9997#9998#0" expanded="true" />
-            <element signature="e#10067#10373#0" expanded="true" />
-            <element signature="e#10372#10373#0" expanded="true" />
+            <element signature="e#8844#9885#0" expanded="true" />
+            <element signature="e#9884#9885#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,12 +825,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1189#1974#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
-            <element signature="e#9623#9998#0" expanded="true" />
-            <element signature="e#9997#9998#0" expanded="true" />
-            <element signature="e#10067#10373#0" expanded="true" />
-            <element signature="e#10372#10373#0" expanded="true" />
+            <element signature="e#8844#9885#0" expanded="true" />
+            <element signature="e#9884#9885#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -923,17 +914,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Correcteur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        <state relative-caret-position="160">
+          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="49" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1189#1974#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
-            <element signature="e#9623#9998#0" expanded="true" />
-            <element signature="e#9997#9998#0" expanded="true" />
-            <element signature="e#10067#10373#0" expanded="true" />
-            <element signature="e#10372#10373#0" expanded="true" />
+            <element signature="e#8844#9885#0" expanded="true" />
+            <element signature="e#9884#9885#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -18,6 +18,7 @@ public class Correcteur extends JFrame{
     private Font textFont =  new Font("Arial",Font.PLAIN,26);
     private Dictionnaire dictionnaire;
     private Boolean corrige = false;
+    private JPopupMenu menuCor = new JPopupMenu();
 
     private Correcteur() {
         super("Correcteur");
@@ -33,29 +34,31 @@ public class Correcteur extends JFrame{
         makeMenu();
         this.add(textPanel, BorderLayout.CENTER);
         this.pack();
-        texteZone.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent e) {
-                if (SwingUtilities.isRightMouseButton(e)) {
-                    try {
-                        int offset = texteZone.viewToModel(e.getPoint());
-                        System.out.println(texteZone.modelToView(offset));
-                        int start = Utilities.getWordStart(texteZone, offset);
-                        int end = Utilities.getWordEnd(texteZone, offset);
-                        String word = texteZone.getDocument().getText(start, end - start);
-                        System.out.println("Selected word: " + word);
-                        checkWord(word, start, end);
-                    } catch (Exception e2) {
-                    }
-                }
-            }
-        });
     }
 
 
-    private void checkWord(String word, int wordStart, int wordEnd) {
+    private void checkWord(String word, int wordStart, int wordEnd, MouseEvent event) {
         if (!dictionnaire.querry(word.toLowerCase())) {
-            JOptionPane.showMessageDialog(null, word);
             texteZone.select(wordStart, wordEnd);
+
+            JMenuItem mot1 = new JMenuItem(word);
+            JMenuItem mot2 = new JMenuItem(word);
+            JMenuItem mot3 = new JMenuItem(word);
+            JMenuItem mot4 = new JMenuItem(word);
+            JMenuItem mot5 = new JMenuItem(word);
+
+            //mot1.addActionListener(this);
+            //mot2.addActionListener(this);
+            //mot3.addActionListener(this);
+            //mot4.addActionListener(this);
+            //mot5.addActionListener(this);
+
+            menuCor.add(mot1);
+            menuCor.add(mot2);
+            menuCor.add(mot3);
+            menuCor.add(mot4);
+            menuCor.add(mot5);
+            menuCor.show(texteZone, event.getX(), event.getY() + 20);
         }
     }
 
@@ -93,8 +96,9 @@ public class Correcteur extends JFrame{
             public void actionPerformed(ActionEvent e) {
             	try {
             		JFileChooser choix = new JFileChooser();{
-	            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt"); //verifie que l'extension du fichier est bien .txt
-	            		choix.setFileFilter(filter); //applique le filtre 
+                        //verifie que l'extension du fichier est bien .txt
+	            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt");
+	            		choix.setFileFilter(filter); //applique le filtre
 	             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 	             		FileReader in = new FileReader(choix.getSelectedFile());
 	             		BufferedReader buff = new BufferedReader(in);  
@@ -108,7 +112,8 @@ public class Correcteur extends JFrame{
 	             	}
             		}
             }catch (FileNotFoundException exception){
-            		JOptionPane.showMessageDialog(null, "Fichier de lecture introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+            		JOptionPane.showMessageDialog(null,
+                            "Fichier de lecture introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
             }catch (IOException exception){
                 exception.printStackTrace();
             }
@@ -125,7 +130,8 @@ public class Correcteur extends JFrame{
             public void actionPerformed(ActionEvent e) {
 	            	try {
 	            		JFileChooser choix = new JFileChooser();{
-		            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt"); //verifie que l'extension du fichier est bien .txt
+                            //verifie que l'extension du fichier est bien .txt
+		            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt");
 		            		choix.setFileFilter(filter); //applique le filtre 
 		             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 		             		FileWriter out = new FileWriter(choix.getSelectedFile());
@@ -135,7 +141,8 @@ public class Correcteur extends JFrame{
 		             	}
 	            		}	
 	            }catch (FileNotFoundException exception){
-	            		JOptionPane.showMessageDialog(null, "Fichier d'écriture introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+	            		JOptionPane.showMessageDialog(null,
+                                "Fichier d'écriture introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
 	            }catch (IOException exception){
 	                exception.printStackTrace();
 	            }
@@ -150,7 +157,8 @@ public class Correcteur extends JFrame{
         Action quitAction = new AbstractAction("Quitter") {
             @Override
             public void actionPerformed(ActionEvent e) {
-            		JOptionPane.showMessageDialog(null, "Au revoir!", "Fermeture", JOptionPane.INFORMATION_MESSAGE);
+            		JOptionPane.showMessageDialog(null,
+                            "Au revoir!", "Fermeture", JOptionPane.INFORMATION_MESSAGE);
                 System.exit(0);
             }
         };
@@ -170,14 +178,16 @@ public class Correcteur extends JFrame{
 
 	            	try {
 	            		JFileChooser choix = new JFileChooser();{
-		            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt"); //verifie que l'extension du fichier est bien .txt
+                            //verifie que l'extension du fichier est bien .txt
+		            		FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichiers texte", "txt");
 		            		choix.setFileFilter(filter); //applique le filtre 
 		             	if (choix.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 		             		dictionnaire = new Dictionnaire(choix.getSelectedFile());
 		             	}
 	            		}
 	            }catch (FileNotFoundException exception){
-	            		JOptionPane.showMessageDialog(null, "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
+	            		JOptionPane.showMessageDialog(null,
+                                "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
 	            }catch (IOException exception){
 	                exception.printStackTrace();
 	            }
@@ -201,55 +211,29 @@ public class Correcteur extends JFrame{
                 if (dictionnaire != null && !(dictionnaire.isEmpty())) {
                     TextAreaHighlight h = new TextAreaHighlight();
                     h.highlight(texteZone, dictionnaire);//highlight les mots qui ne sont pas dans dictionnaire
-                    JPopupMenu menuCor = new JPopupMenu();
-                    
-                    JMenuItem mot1 = new JMenuItem("mot1");
-                    JMenuItem mot2 = new JMenuItem("mot2");
-                    JMenuItem mot3 = new JMenuItem("mot3");
-                    JMenuItem mot4 = new JMenuItem("mot4");
-                    JMenuItem mot5 = new JMenuItem("mot5");
-                    
-                    mot1.addActionListener(this);
-                    mot2.addActionListener(this);
-                    mot3.addActionListener(this);
-                    mot4.addActionListener(this);
-                    mot5.addActionListener(this);
-    
-                	    menuCor.add(mot1);
-              	    menuCor.add(mot2);
-              	    menuCor.add(mot3);
-              	    menuCor.add(mot4);
-              	    menuCor.add(mot5);
-              	    texteZone.add(menuCor);
-                    
-                    texteZone.addMouseListener(new MouseAdapter(){
-                    		 public void mousePressed(MouseEvent event) {
-                            if(event.isPopupTrigger()) {
-	                        	  menuCor.show(texteZone, event.getX(), event.getY() + 20); //affiche le menu -- plus bas afin de ne pas cacher le mot incorrect
+                    texteZone.add(menuCor);
+
+                    texteZone.addMouseListener(new MouseAdapter() {
+                        public void mouseClicked(MouseEvent event) {
+                            if (SwingUtilities.isRightMouseButton(event)) {
+                                try {
+                                    menuCor.removeAll();
+                                    int offset = texteZone.viewToModel(event.getPoint());
+                                    System.out.println(texteZone.modelToView(offset));
+                                    int start = Utilities.getWordStart(texteZone, offset);
+                                    int end = Utilities.getWordEnd(texteZone, offset);
+                                    String word = texteZone.getDocument().getText(start, end - start);
+                                    System.out.println("Selected word: " + word);
+                                    checkWord(word, start, end, event);
+                                } catch (Exception e2) {
+                                }
                             }
-	                     }
+                        }
                     });
-                    
-                    menuCor.addMouseListener(new MouseAdapter(){
-               		 public void mousePressed(MouseEvent event) {
-               			if(e.getSource() == mot1) {
-							JOptionPane.showMessageDialog(null, "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
-						}
-                    }
-               });
-                    
-                    /*ActionListener choixMot = new ActionListener() {
-						@Override
-						public void actionPerformed(ActionEvent e) {
-							if(e.getSource() == mot1) {
-								JOptionPane.showMessageDialog(null, "Fichier contenant le dictionnaire introuvable!", "Erreur", JOptionPane.ERROR_MESSAGE);
-							}
-						}
-                    	
-                    };*/
-                    
-                }else {
-                		JOptionPane.showMessageDialog(null, "Le dictionnaire est vide!", "Erreur", JOptionPane.ERROR_MESSAGE);
+
+                } else {
+                    JOptionPane.showMessageDialog(null,
+                            "Le dictionnaire est vide!", "Erreur", JOptionPane.ERROR_MESSAGE);
                 }
             }
         };
