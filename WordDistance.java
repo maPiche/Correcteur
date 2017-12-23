@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by Marc-André Piché|783722 | 2017-12-17.
  * Anthony Lemieux|20077762
- * <p>
+ *
  * Calcul la distance d'édition entre deux mots en considérant leur similarité
  * implantation de l'algorithme de Levenshtein
  */

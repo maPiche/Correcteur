@@ -15,7 +15,7 @@ import java.io.*;
 
 
 public class Correcteur extends JFrame{
-    private JTextArea texteZone = new JTextArea("C'est fou ce Dictionnaire inncroyalbe."); 
+    private JTextArea texteZone = new JTextArea("");
     private Font textFont =  new Font("Arial",Font.PLAIN,26);
     private Dictionnaire dictionnaire;
     private Boolean corrige = false;
@@ -45,17 +45,20 @@ public class Correcteur extends JFrame{
     private class distanceDeMot extends AbstractAction{
         private int distance;
         private String word;
+        private int start;
+        private int end;
 
-        distanceDeMot(String word,int distance){
-            super(word + " "+distance);
+        distanceDeMot(String word,int distance,int start,int end){
+            super(word);
             this.distance = distance;
             this.word = word;
+            this.start = start;
+            this.end = end;
         }
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e) {/// je ne sais pas comment remplacer ici avec start et end
+            texteZone.replaceRange(word,start,end);
 
-            JOptionPane.showMessageDialog(null,
-                    word +" :"+distance, "Erreur", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -70,11 +73,11 @@ public class Correcteur extends JFrame{
 
             System.out.println(words.toString());
             //Creation des mots proposes dans le JPopupMenu
-            JMenuItem mot1 = new JMenuItem(new distanceDeMot(words[0],1));
-            JMenuItem mot2 = new JMenuItem(new distanceDeMot(words[1],2));
-            JMenuItem mot3 = new JMenuItem(new distanceDeMot(words[2],3));
-            JMenuItem mot4 = new JMenuItem(new distanceDeMot(words[3],4));
-            JMenuItem mot5 = new JMenuItem(new distanceDeMot(words[4],5));
+            JMenuItem mot1 = new JMenuItem(new distanceDeMot(words[0],1,wordStart,wordEnd));
+            JMenuItem mot2 = new JMenuItem(new distanceDeMot(words[1],2,wordStart,wordEnd));
+            JMenuItem mot3 = new JMenuItem(new distanceDeMot(words[2],3,wordStart,wordEnd));
+            JMenuItem mot4 = new JMenuItem(new distanceDeMot(words[3],4,wordStart,wordEnd));
+            JMenuItem mot5 = new JMenuItem(new distanceDeMot(words[4],5,wordStart,wordEnd));
 
             menuCor.add(mot1);
             menuCor.add(mot2);
