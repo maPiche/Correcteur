@@ -9,6 +9,8 @@ import static java.util.Arrays.sort;
 
 /**
  * Created by Marc-André Piché|783722 - 2017-12-19.
+ * 			  Anthony Lemieux|20077762
+ *
  * Creer un dictionnaire a partir d'un fichier text : une ligne = un mot
  * querry revoie true/false si le mot est dans le dictionnaire
  */

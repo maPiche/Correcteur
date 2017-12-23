@@ -1,6 +1,12 @@
 import java.awt.*;
 import javax.swing.text.*;
 
+/**
+ * Created by Marc-André Piché|783722 | 2017-12-17.
+ * 			  Anthony Lemieux|20077762
+ */
+
+
 class TextAreaHighlight {
 
     //Surligne toutes les occurences de mots présents dans textComp qui sont absent dans le dictionnaire

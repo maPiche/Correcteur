@@ -3,8 +3,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * Created by Marc-André Piché|783722 on 2017-12-22.
- * <p>
+ * Created by Marc-André Piché|783722 | 2017-12-17.
+ * 			  Anthony Lemieux|20077762
+ *
  * Calcul la distance d'édition entre deux mots en considérant leur similarité
  * implantation de l'algorithme de Levenshtein
  */
