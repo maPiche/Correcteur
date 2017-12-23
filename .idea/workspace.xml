@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ac6b60-163f-4dd4-8edb-3af844cd84f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WordDistance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$1.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$2.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$3.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$4.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$5.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Correcteur/Correcteur.class" afterPath="$PROJECT_DIR$/out/production/Correcteur/Correcteur.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Correcteur.java" afterPath="$PROJECT_DIR$/Correcteur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WordDistance.java" afterPath="$PROJECT_DIR$/WordDistance.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +34,8 @@
       <file leaf-file-name="WordDistance.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WordDistance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2360">
-              <caret line="65" column="25" lean-forward="true" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="400">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -67,6 +60,9 @@
               <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
+                <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
+                <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -79,10 +75,7 @@
               <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-                <element signature="e#1191#1192#0" expanded="true" />
-                <element signature="e#1236#1237#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
+                <marker date="1513996679294" expanded="false" signature="1655:1669" ph=" { " />
               </folding>
             </state>
           </provider>
@@ -127,8 +120,8 @@
         <option value="$PROJECT_DIR$/TextAreaHighlight.java" />
         <option value="$PROJECT_DIR$/TextAreaTest.java" />
         <option value="$PROJECT_DIR$/Dictionnaire.java" />
-        <option value="$PROJECT_DIR$/WordDistance.java" />
         <option value="$PROJECT_DIR$/Correcteur.java" />
+        <option value="$PROJECT_DIR$/WordDistance.java" />
       </list>
     </option>
   </component>
@@ -622,7 +615,7 @@
       <updated>1513542242290</updated>
       <workItem from="1513542244073" duration="30737000" />
       <workItem from="1513882292062" duration="394000" />
-      <workItem from="1513958424248" duration="29686000" />
+      <workItem from="1513958424248" duration="30733000" />
     </task>
     <task id="LOCAL-00001" summary="update JFileChooser">
       <created>1513958969158</created>
@@ -673,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513991758118</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update Merge">
+      <created>1513996638348</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1513996638348</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60817000" />
+    <option name="totallyTimeSpent" value="61864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2114" extended-state="6" />
@@ -836,6 +836,9 @@
           <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
+            <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
+            <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -846,10 +849,7 @@
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
+            <marker date="1513996679294" expanded="false" signature="1655:1669" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -883,6 +883,9 @@
           <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
+            <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
+            <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -893,10 +896,7 @@
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
+            <marker date="1513996679294" expanded="false" signature="1655:1669" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -942,10 +942,7 @@
           <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
+            <marker date="1513996679294" expanded="false" signature="1655:1669" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -956,14 +953,17 @@
           <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1513996679294" expanded="true" signature="2187:2272" ph="{...}" />
+            <marker date="1513996679294" expanded="false" signature="2228:2243" ph=" { " />
+            <marker date="1513996679294" expanded="false" signature="2256:2266" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WordDistance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2360">
-          <caret line="65" column="25" lean-forward="true" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="400">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
