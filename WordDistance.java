@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by Marc-André Piché|783722 on 2017-12-22.
@@ -9,28 +11,52 @@ import java.util.Arrays;
 
 
 public class WordDistance {
+    private int maxDistance = Integer.MAX_VALUE;
+    private Random dice = new Random();
+
+    final private ArrayList<Result> results = new ArrayList<Result>();
 
     //méthode inefficace du au type de dictionnaire Hashset s'adonne à être moins bon ici, une Trie aurait été parfaite
-    public static String[] correction(String inconnue, Dictionnaire dictionnaire){
-        final Result[] results = new Result[5];
-
-        for (String item:dictionnaire.setDict) {
-
+    public String[] correction(String inconnue, Dictionnaire dictionnaire) {
+        for (String item : dictionnaire.setDict) {
+            //insert le mot comparé dans la liste
+            insert(new Result(compare(inconnue, item,Math.max(inconnue.length(),item.length())),item));
         }
+        //renvoie les 5 meilleurs mots
+        String[] returned = new String[5];
+        for (int j = 0; j<returned.length ;j++){
+            returned[j] = results.get(j).word;
+        }
+        return returned;
+    }
 
+    private void insert(Result mot){
+        if (mot.distance < maxDistance){
+
+            for (int i = 0; i < results.size(); i++) {
+                if (results.get(i).distance < mot.distance) continue;
+                if (results.get(i).distance == mot.distance) {
+                    if (dice.nextBoolean()) results.set(i,mot);
+                    return;
+                }
+                results.set(i,mot);
+                return;
+            }
+            results.add(mot);
         }
     }
 
-    private class Result{
+    private class Result {
         int distance;
         String word;
-        Result(int distance, String word){
+
+        Result(int distance, String word) {
             this.distance = distance;
             this.word = word;
         }
     }
 
-    public static int compare(String left, String right, int limite) {
+    private static int compare(String left, String right, int limite) {
         if (left == null || right == null) {
             throw new IllegalArgumentException("Strings must not be null");
         }
