@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86ac6b60-163f-4dd4-8edb-3af844cd84f8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Correcteur.java" afterPath="$PROJECT_DIR$/Correcteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dictionnaire.java" afterPath="$PROJECT_DIR$/Dictionnaire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WordDistance.java" afterPath="$PROJECT_DIR$/WordDistance.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -621,7 +618,7 @@
       <updated>1513542242290</updated>
       <workItem from="1513542244073" duration="30737000" />
       <workItem from="1513882292062" duration="394000" />
-      <workItem from="1513958424248" duration="32538000" />
+      <workItem from="1513958424248" duration="32546000" />
     </task>
     <task id="LOCAL-00001" summary="update JFileChooser">
       <created>1513958969158</created>
@@ -693,11 +690,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513998553360</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update Distance">
+      <created>1514000280686</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1514000280686</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63669000" />
+    <option name="totallyTimeSpent" value="63677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2114" extended-state="6" />
