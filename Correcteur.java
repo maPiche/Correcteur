@@ -36,15 +36,16 @@ public class Correcteur extends JFrame{
         this.pack();
     }
 
+    //action lorsqu'on sur un item du popup-menu
     private class distanceDeMot extends AbstractAction{
         private int distance;
         private String word;
+
         distanceDeMot(String word,int distance){
             super(word + " "+distance);
             this.distance = distance;
             this.word = word;
         }
-
         @Override
         public void actionPerformed(ActionEvent e) {
             JOptionPane.showMessageDialog(null,
@@ -72,28 +73,12 @@ public class Correcteur extends JFrame{
         }
     }
 
-    /*class Boutton extends JMenuItem implements ActionListener{
-
-        Boutton(String name) {
-            super(name);
-            addActionListener(this);
-            this.setPreferredSize(new Dimension(150,100));
-            this.setMaximumSize(new Dimension(150,200));
-        }
-        // action listener
-        public void actionPerformed(java.awt.event.ActionEvent e) {
-            texteZone.append(getText());
-        }
-    }*/
-
-
-    //---MENU BAR
+    //---MENU BAR  : création de tous les items menu -----//
     private void makeMenu(){
         UIManager.put("Menu.font", textFont);
         UIManager.put("MenuItem.font", textFont);
         JMenuBar menuBar = new JMenuBar();
 
-        
         //menu fichier
         JMenu menuFichier = new JMenu("Fichier");
         menuBar.add(menuFichier);
@@ -206,10 +191,7 @@ public class Correcteur extends JFrame{
         menuItemCharger.setAction(loadAction);
         menuBar.add(menuDict);
 
-        
-        
-        
-        
+
         //menu verification
         JMenu menuVerif = new JMenu("Vérifier");
         JMenuItem menuItemOrth = new JMenuItem("Orthographe");
@@ -221,6 +203,7 @@ public class Correcteur extends JFrame{
                 if (dictionnaire != null && !(dictionnaire.isEmpty())) {
                     TextAreaHighlight h = new TextAreaHighlight();
                     h.highlight(texteZone, dictionnaire);//highlight les mots qui ne sont pas dans dictionnaire
+                    corrige = true;
                     texteZone.add(menuCor);
 
                     texteZone.addMouseListener(new MouseAdapter() {
